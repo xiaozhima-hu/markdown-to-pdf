@@ -4,7 +4,7 @@ import puppeteer from 'puppeteer';
 import { marked } from 'marked';
 
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 // 中间件
 app.use(cors());

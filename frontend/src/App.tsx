@@ -2,6 +2,8 @@ import { useState } from 'react'
 import ReactMarkdown from 'react-markdown'
 import './App.css'
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3001'
+
 function App() {
   const [markdown, setMarkdown] = useState(`# 欢迎使用 Markdown to PDF
 
@@ -50,7 +52,7 @@ function App() {
 
     try {
       const optimizedContent = optimizeMarkdown(markdown)
-      const response = await fetch('http://localhost:3001/api/generate-pdf', {
+      const response = await fetch(`${API_BASE_URL}/api/generate-pdf`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
