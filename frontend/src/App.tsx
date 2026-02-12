@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 import './App.css'
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3001'
@@ -15,6 +16,14 @@ function App() {
 - 右侧实时预览
 - 自动优化排版
 - 一键下载 PDF
+
+## 表格示例
+
+| 名称 | 类型 | 描述 |
+|------|------|------|
+| React | 库 | 用于构建用户界面 |
+| Vue | 框架 | 渐进式 JavaScript 框架 |
+| Angular | 框架 | 完整的企业级前端解决方案 |
 
 ## 开始使用
 
@@ -119,7 +128,7 @@ function App() {
           </div>
           <div className="preview-content">
             <div className="markdown-preview">
-              <ReactMarkdown>{optimizedMarkdown}</ReactMarkdown>
+              <ReactMarkdown remarkPlugins={[remarkGfm]}>{optimizedMarkdown}</ReactMarkdown>
             </div>
           </div>
           {error && (

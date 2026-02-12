@@ -163,6 +163,58 @@
   text-decoration: underline;
 }
 
+/* 表格样式 */
+.markdown-preview table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5em 0;
+  font-size: 0.95em;
+  overflow: hidden;
+  display: block;
+  overflow-x: auto;
+}
+
+.markdown-preview table thead {
+  background-color: #f6f8fa;
+  border-bottom: 2px solid #ddd;
+}
+
+.markdown-preview table th {
+  padding: 0.75em 1em;
+  text-align: left;
+  font-weight: 600;
+  color: #24292e;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-preview table td {
+  padding: 0.75em 1em;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.markdown-preview table tbody tr {
+  transition: background-color 0.2s;
+}
+
+.markdown-preview table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.markdown-preview table tbody tr:hover {
+  background-color: #f0f0f0;
+}
+
+.markdown-preview table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* 表格内的代码样式 */
+.markdown-preview table code {
+  background-color: transparent;
+  padding: 0;
+  font-size: 0.9em;
+}
+
 .download-btn {
   padding: 0.6rem 1.5rem;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
